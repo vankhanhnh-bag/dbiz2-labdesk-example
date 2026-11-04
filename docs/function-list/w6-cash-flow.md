@@ -7,11 +7,11 @@ Lesson 6 (Capital Budgeting). Takes the three scenarios from [W5](w5-handover.md
 ## 1. Assumptions
 
 | Assumption | Value |
-|---|---|
+| --- | --- |
 | Discount rate (hurdle rate) | 12% per year |
 | Evaluation horizon | 5 years |
 | Annual running cost | 15% of build cost per year (hosting, email service, maintenance) |
-| Contingency | 10% of the Must cost = 2.748.000 VND, same in every scenario |
+| Contingency | 10% of the Must cost = 2.748.000 VND, recalculated from W5 |
 | Steady-state annual benefit | Must 18.000.000 · Should 8.000.000 · Could 2.000.000 VND |
 | Adoption ramp-up (share of steady-state benefit) | Year 1: 40% · Year 2: 70% · Year 3 to 5: 100% |
 
@@ -20,7 +20,7 @@ Where the benefit comes from (team estimates, to be checked with the faculty aft
 ## Pessimistic: Must only
 
 | Line item | Year 0 | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | Benefits | 0 | 7.200.000 | 12.600.000 | 18.000.000 | 18.000.000 | 18.000.000 |
 | Running cost | 0 | -4.122.000 | -4.122.000 | -4.122.000 | -4.122.000 | -4.122.000 |
 | Investment (build + contingency) | -30.228.000 | 0 | 0 | 0 | 0 | 0 |
@@ -31,7 +31,7 @@ Where the benefit comes from (team estimates, to be checked with the faculty aft
 ## Base: Must + Should
 
 | Line item | Year 0 | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | Benefits | 0 | 10.400.000 | 18.200.000 | 26.000.000 | 26.000.000 | 26.000.000 |
 | Running cost | 0 | -5.907.000 | -5.907.000 | -5.907.000 | -5.907.000 | -5.907.000 |
 | Investment (build + contingency) | -42.128.000 | 0 | 0 | 0 | 0 | 0 |
@@ -42,7 +42,7 @@ Where the benefit comes from (team estimates, to be checked with the faculty aft
 ## Optimistic: full scope
 
 | Line item | Year 0 | Year 1 | Year 2 | Year 3 | Year 4 | Year 5 |
-|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- |
 | Benefits | 0 | 11.200.000 | 19.600.000 | 28.000.000 | 28.000.000 | 28.000.000 |
 | Running cost | 0 | -7.485.000 | -7.485.000 | -7.485.000 | -7.485.000 | -7.485.000 |
 | Investment (build + contingency) | -52.648.000 | 0 | 0 | 0 | 0 | 0 |
@@ -53,7 +53,7 @@ Where the benefit comes from (team estimates, to be checked with the faculty aft
 ## Results
 
 | Metric | Pessimistic: Must only | Base: Must + Should | Optimistic: full scope |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Year-0 investment (VND) | 30.228.000 | 42.128.000 | 52.648.000 |
 | Steady-state benefit per year (VND) | 18.000.000 | 26.000.000 | 28.000.000 |
 | NPV at 12% (VND) | 5.851.380 | 10.156.085 | -392.445 |
@@ -62,5 +62,5 @@ Where the benefit comes from (team estimates, to be checked with the faculty aft
 | Profitability index | 1.19 | 1.24 | 0.99 |
 | Decision signal | ACCEPT | ACCEPT | REJECT / REVIEW |
 
-Reading: the Base scenario (Must + Should) has the highest NPV and IRR, so it is the figure the team gives the client. Building the Could rows as well adds cost faster than benefit: NPV turns slightly negative and IRR falls below the 12% hurdle. The Could rows stay as the scope contingency pool, not as a promise.
+Reading: The Base scenario has the highest NPV; the Base scenario has the highest IRR. Benefits, running costs, investment, NPV, IRR and payback above are recalculated from W5 and the assumptions at the top of this file. The contingency remains 10% of the Must cost.
 Formulas: NPV = sum of net cash flow / (1 + r)^t for t = 0 to 5; IRR is the rate at which NPV = 0; payback interpolates inside the year in which the cumulative net cash flow turns positive; profitability index = 1 + NPV / investment.

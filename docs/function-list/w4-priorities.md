@@ -12,7 +12,7 @@ Lesson 5 (block W4). Cut by lowering priority, never by lowering estimates. Ever
 | R4 Won't | Agreed out of scope for this release | Did the client accept deferring it? |
 
 | Feature | L2 ID | L2 function name | Initial priority | Effective priority | Justification (required if changed) | Person-hours | Cost (VND) |
-|---|---|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- | --- | --- |
 | F-00 | FR-00-01 | Sign in with the university account | Must | Must |  | 11.2 | 3.160.000 |
 | F-00 | FR-00-02 | Enforce user roles | Must | Must |  | 3.4 | 1.020.000 |
 | F-00 | FR-00-03 | Deploy automatically | Must | Must |  | 10.2 | 3.060.000 |
