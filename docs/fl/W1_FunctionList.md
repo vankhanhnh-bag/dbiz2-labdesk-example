@@ -36,7 +36,7 @@
 | F-01 | FR-01-07 | Maintain carbon traceability linkage | WHEN production, supplier and shipment records are created, the system SHALL link each record to its upstream raw material sources and downstream shipped batches to maintain an unbroken traceability chain. | UC-06 | Must | NC | FR-01-07-BE | BE | Data model & linkage engine: raw-material-to-shipment traceability graph | L | 16 | Yes | Yes | 1 | 7 | 0 |
 | F-01 | FR-01-08 | View carbon traceability record | WHEN a Sustainability & ESG user selects a shipped product batch, the system SHALL display the full carbon traceability record from raw material through production to shipment. | UC-06 | Should | EQ | FR-01-08-FE | FE | Screen: end-to-end carbon traceability record viewer | M | 8 | Yes | No | 1 | 8 | 4 |
 | F-01 | FR-01-08 | View carbon traceability record | WHEN a Sustainability & ESG user selects a shipped product batch, the system SHALL display the full carbon traceability record from raw material through production to shipment. | UC-06 | Should | EQ | FR-01-08-BE | BE | API: retrieve linked traceability chain and associated carbon data | M | 8 | Yes | No | 0 | 8 | 0 |
-| F-02 | FR-02-01 | Load shipment inputs for CBAM estimation | WHEN a user selects a valid order or shipment, the system SHALL load the associated product, net weight, destination market, planned departure date and verified carbon-intensity data for CBAM estimation. | UC-07 | Could | EQ | FR-02-01-FE | FE | Screen: order/shipment filters and auto-filled shipment inputs | S | 8 | Yes | No | 1 | 9 | 4 |
+| F-02 | FR-02-01 | Load shipment inputs for CBAM estimation | WHEN a user selects a valid order or shipment, the system SHALL load the associated product, net weight, destination market, planned departure date and verified carbon-intensity data for CBAM estimation. | UC-07 | Could | EQ | FR-02-01-FE | FE | Screen: order/shipment filters and auto-filled shipment inputs | S | 4 | Yes | No | 1 | 9 | 4 |
 | F-02 | FR-02-01 | Load shipment inputs for CBAM estimation | WHEN a user selects a valid order or shipment, the system SHALL load the associated product, net weight, destination market, planned departure date and verified carbon-intensity data for CBAM estimation. | UC-07 | Must | EQ | FR-02-01-BE | BE | API: retrieve shipment, product and verified PCF inputs | M | 8 | Yes | No | 0 | 9 | 0 |
 | F-02 | FR-02-02 | Validate CBAM calculation eligibility and inputs | IF required shipment, product, carbon or destination data is missing or invalid, the system SHALL block the calculation and display the validation reason. | UC-07 | Must | NC | FR-02-02-BE | BE | Validation rules for required inputs, EU destination and eligible product data | M | 8 | Yes | Yes | 1 | 10 | 0 |
 | F-02 | FR-02-02 | Validate CBAM calculation eligibility and inputs | IF required shipment, product, carbon or destination data is missing or invalid, the system SHALL block the calculation and display the validation reason. | UC-07 | Must | NC | FR-02-02-FE | FE | Display validation errors and missing-data guidance | S | 4 | Yes | No | 0 | 10 | 0 |
@@ -89,7 +89,7 @@
 | Item | Value |
 |---|---|
 | L2 / L3 count | L2 functions: 35   \|   L3 work items: 59 |
-| Total base hours | 512 |
+| Total base hours | 508 |
 | Total transactional FP | 144 |
 | Integrity | All L3 rows have a numeric Base hours value |
 <!-- END:totals -->

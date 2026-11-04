@@ -33,8 +33,8 @@
 | FR-01-07-BE | F-01 | FR-01-07 | BE | 16 | 0.7 | 11.2 | 0.15 | 2.4 | 13.6 | Senior | 300,000 | 4,080,000 | Must |
 | FR-01-08-FE | F-01 | FR-01-08 | FE | 8 | 0.35 | 2.8 | 0.15 | 1.2 | 4 | Junior | 200,000 | 800,000 | Should |
 | FR-01-08-BE | F-01 | FR-01-08 | BE | 8 | 0.7 | 5.6 | 0.15 | 1.2 | 6.8 | Senior | 300,000 | 2,040,000 | Should |
-| FR-02-01-FE | F-02 | FR-02-01 | FE | 8 | 0.35 | 2.8 | 0.15 | 1.2 | 4 | Junior | 200,000 | 800,000 | Must |
-| FR-02-01-BE | F-02 | FR-02-01 | BE | 8 | 0.7 | 5.6 | 0.15 | 1.2 | 6.8 | Senior | 300,000 | 2,040,000 | Must |
+| FR-02-01-FE | F-02 | FR-02-01 | FE | 4 | 0.35 | 1.4 | 0.15 | 0.6 | 2 | Junior | 200,000 | 400,000 | Could |
+| FR-02-01-BE | F-02 | FR-02-01 | BE | 8 | 0.7 | 5.6 | 0.15 | 1.2 | 6.8 | Senior | 300,000 | 2,040,000 | Could |
 | FR-02-02-BE | F-02 | FR-02-02 | BE | 8 | 0.7 | 5.6 | 0.15 | 1.2 | 6.8 | Senior | 300,000 | 2,040,000 | Must |
 | FR-02-02-FE | F-02 | FR-02-02 | FE | 4 | 0.35 | 1.4 | 0.15 | 0.6 | 2 | Junior | 200,000 | 400,000 | Must |
 | FR-02-03-BE | F-02 | FR-02-03 | BE | 8 | 0.7 | 5.6 | 0.15 | 1.2 | 6.8 | Senior | 300,000 | 2,040,000 | Must |
@@ -78,7 +78,7 @@
 | FR-04-04-BE | F-04 | FR-04-04 | BE | 8 | 0.7 | 5.6 | 0.15 | 1.2 | 6.8 | Senior | 300,000 | 2,040,000 | Must |
 | FR-04-05-BE | F-04 | FR-04-05 | BE | 8 | 0.7 | 5.6 | 0.15 | 1.2 | 6.8 | Senior | 300,000 | 2,040,000 | Should |
 | FR-04-06-FE | F-04 | FR-04-06 | FE | 4 | 0.35 | 1.4 | 0.15 | 0.6 | 2 | Junior | 200,000 | 400,000 | Should |
-| TOTAL |  |  |  | 512 |  | 316.2 |  | 82.8 | 399 |  |  | 112,300,000 |  |
+| TOTAL |  |  |  | 508 |  | 314.8 |  | 82.2 | 397 |  |  | 111,900,000 |  |
 <!-- END:l3 -->
 
 ## Cost per L2 function
@@ -94,7 +94,7 @@
 | FR-01-06 | Perform Scope 3 assessment | F-01 | EO | 2 | 17.6 | 4,880,000 | Should |
 | FR-01-07 | Maintain carbon traceability linkage | F-01 | NC | 1 | 13.6 | 4,080,000 | Must |
 | FR-01-08 | View carbon traceability record | F-01 | EQ | 2 | 10.8 | 2,840,000 | Should |
-| FR-02-01 | Load shipment inputs for CBAM estimation | F-02 | EQ | 2 | 10.8 | 2,840,000 | Must |
+| FR-02-01 | Load shipment inputs for CBAM estimation | F-02 | EQ | 2 | 8.8 | 2,440,000 | Could |
 | FR-02-02 | Validate CBAM calculation eligibility and inputs | F-02 | NC | 2 | 8.8 | 2,440,000 | Must |
 | FR-02-03 | Calculate verified embedded emissions | F-02 | EO | 1 | 6.8 | 2,040,000 | Must |
 | FR-02-04 | Determine CBAM-exempt emissions | F-02 | EO | 1 | 13.6 | 4,080,000 | Must |
@@ -135,10 +135,10 @@
 | Functional work — function-point estimate (h) | 606 | What function points can see |
 | Non-functional (NC) work — bottom-up (h) | 40 | The 0 function point problem: concurrency, authorisation, deployment. IFPUG needs a separate method (SNAP) for this |
 | Function-point basis total (h) | 646 | Functional + non-functional |
-| Bottom-up basis total (h) | 512 | Sum of W1 column L |
-| Variance | -20.7% | Within tolerance - the two methods agree |
+| Bottom-up basis total (h) | 508 | Sum of W1 column L |
+| Variance | -21.4% | Within tolerance - the two methods agree |
 | Active estimation basis | Bottom-up | Set on Parameters section 9 |
-| Base hours actually in use | 512 | What the cost columns are built from right now |
+| Base hours actually in use | 508 | What the cost columns are built from right now |
 <!-- END:fp_check -->
 
 _Read it this way: function points size the FUNCTIONAL work only, so the NC line is added separately rather than folded in. Switching the basis on Parameters section 9 changes which of the two totals drives every cost in the workbook; NC rows stay on bottom-up either way, because there is no function-point number for them to come from._

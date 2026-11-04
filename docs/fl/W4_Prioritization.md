@@ -38,7 +38,7 @@
 | F-01 | FR-01-06 | Perform Scope 3 assessment | Should |  |  |  | Should |  | 17.6 | 4,880,000 |
 | F-01 | FR-01-07 | Maintain carbon traceability linkage | Must |  |  |  | Must |  | 13.6 | 4,080,000 |
 | F-01 | FR-01-08 | View carbon traceability record | Should |  |  |  | Should |  | 10.8 | 2,840,000 |
-| F-02 | FR-02-01 | Load shipment inputs for CBAM estimation | Must |  |  |  | Must |  | 10.8 | 2,840,000 |
+| F-02 | FR-02-01 | Load shipment inputs for CBAM estimation | Could |  |  |  | Could |  | 8.8 | 2,440,000 |
 | F-02 | FR-02-02 | Validate CBAM calculation eligibility and inputs | Must |  |  |  | Must |  | 8.8 | 2,440,000 |
 | F-02 | FR-02-03 | Calculate verified embedded emissions | Must |  |  |  | Must |  | 6.8 | 2,040,000 |
 | F-02 | FR-02-04 | Determine CBAM-exempt emissions | Must |  |  |  | Must |  | 13.6 | 4,080,000 |
@@ -72,8 +72,8 @@
 <!-- BEGIN:control | derived - auto-generated, do not edit -->
 | Indicator | Current | Threshold | Verdict |
 |---|---|---|---|
-| Must share of in-scope effort | 73.0% | 60.0% | OVER THRESHOLD |
-| Could share (contingency pool) | 2.2% | 20.0% | POOL TOO THIN |
-| In-scope effort vs capacity (p-h) | 399 | 240 | OVER THRESHOLD |
-| Expected cost (Must + Should) | 109,860,000 |  | The figure given to the client and used for NPV in Session 8 |
+| Must share of in-scope effort | 70.6% | 60.0% | OVER THRESHOLD |
+| Could share (contingency pool) | 4.4% | 20.0% | POOL TOO THIN |
+| In-scope effort vs capacity (p-h) | 397 | 240 | OVER THRESHOLD |
+| Expected cost (Must + Should) | 107,020,000 |  | The figure given to the client and used for NPV in Session 8 |
 <!-- END:control -->
