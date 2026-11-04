@@ -65,7 +65,7 @@ def find_tables(document: str, after_heading: str | None = None) -> list[tuple[i
     start_at = 0
     if after_heading:
         try:
-            start_at = next(i for i, line in enumerate(lines) if line.strip() == after_heading) + 1
+            start_at = next(i for i, line in enumerate(lines) if line.strip().startswith(after_heading)) + 1
         except StopIteration as exc:
             raise ValueError(f"Heading not found: {after_heading}") from exc
 
