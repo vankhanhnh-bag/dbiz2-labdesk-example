@@ -220,6 +220,19 @@ def main() -> None:
     _, _, l3_header, l3_rows = table_by_header(w1, "L3 ID", "## L3 work items")
     l3_items = [row_dict(l3_header, row) for row in l3_rows]
 
+    # W5 Class Parameters are the editable source of estimation rates and factors.
+    _, _, w5_assumption_header, w5_assumption_rows = table_by_header(w5, "Source", "## 2. Assumptions")
+    w5_assumptions = {row_dict(w5_assumption_header, row)["Assumption"]: row_dict(w5_assumption_header, row)["Value"]
+                      for row in w5_assumption_rows}
+    rate_values = numbers_in(w5_assumptions["Junior / Senior / Expert rate"])
+    ai_values = numbers_in(w5_assumptions["AI leverage FE / BE / INT"])
+    verification_values = numbers_in(w5_assumptions["Verification factor precise / vague"])
+    if len(rate_values) < 2 or len(ai_values) < 3 or len(verification_values) < 2:
+        raise ValueError("W5 rate, AI leverage or verification-factor parameters are incomplete")
+    HOURLY_RATE = {"Junior": rate_values[0], "Senior": rate_values[1]}
+    AI_LEVERAGE = dict(zip(("FE", "BE", "INT"), ai_values[:3]))
+    VERIFICATION_FACTOR = {"Yes": verification_values[0], "No": verification_values[1]}
+
     # W4 Effective priority and justification are manual inputs; derived effort/cost are outputs.
     _, _, w4_header, w4_rows = table_by_header(w4, "Effective priority")
     w4_items = [row_dict(w4_header, row) for row in w4_rows]
@@ -357,10 +370,7 @@ def main() -> None:
     headline_header = ["Scenario", "Scope", "Person-hours", "Cost (VND)", "Meaning"]
     w2 = replace_table(w2, "Meaning", render_table(headline_header, headline_rows), "## The three headline figures")
 
-    # Read W5 class assumptions used by the threshold check and downstream cash flow.
-    _, _, w5_assumption_header, w5_assumption_rows = table_by_header(w5, "Source", "## 2. Assumptions")
-    w5_assumptions = {row_dict(w5_assumption_header, row)["Assumption"]: row_dict(w5_assumption_header, row)["Value"]
-                      for row in w5_assumption_rows}
+    # Use the already parsed W5 assumptions for threshold checks and downstream cash flow.
     capacity_match = re.search(r"(\d+(?:\.\d+)?)\s*person-hours", w5_assumptions["Team capacity"], re.I)
     if not capacity_match:
         raise ValueError("Could not parse Team capacity from W5")
