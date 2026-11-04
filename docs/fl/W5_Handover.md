@@ -16,9 +16,9 @@
 <!-- BEGIN:scenarios | input table - computed columns (do not edit): B, C -->
 | Scenario | Person-hours | Cost (VND) | Role in the sensitivity analysis |
 |---|---|---|---|
-| Pessimistic — Must only | 302 | 86,000,000 | Lowest investment, lowest benefit |
-| Base — Must + Should | 386.2 | 109,060,000 | The client figure; base cash flow for NPV |
-| Optimistic — full scope | 395 | 111,500,000 | If the Could pool is never consumed |
+| Pessimistic — Must only | 291.2 | 83,160,000 | Lowest investment, lowest benefit |
+| Base — Must + Should | 390.2 | 109,860,000 | The client figure; base cash flow for NPV |
+| Optimistic — full scope | 399 | 112,300,000 | If the Could pool is never consumed |
 <!-- END:scenarios -->
 
 _The three MoSCoW tiers ARE the three scenarios — no invented plus-or-minus 20%._
@@ -43,8 +43,8 @@ _The three MoSCoW tiers ARE the three scenarios — no invented plus-or-minus 20
 <!-- BEGIN:tasks | derived - auto-generated, do not edit -->
 | L3 ID | Layer | Effective priority | Person-hours | Risk order |
 |---|---|---|---|---|
-| FR-01-01-FE | FE | Must | 4 | 3 |
-| FR-01-01-BE | BE | Must | 6.8 | 2 |
+| FR-01-01-FE | FE | Should | 8 | 3 |
+| FR-01-01-BE | BE | Should | 6.8 | 2 |
 | FR-01-02-FE | FE | Must | 4 | 3 |
 | FR-01-02-BE | BE | Must | 13.6 | 2 |
 | FR-01-03-BE | BE | Must | 13.6 | 2 |

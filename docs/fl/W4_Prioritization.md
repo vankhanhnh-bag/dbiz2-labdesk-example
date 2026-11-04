@@ -30,7 +30,7 @@
 <!-- BEGIN:main | input table - computed columns (do not edit): A, B, C, D, H, J, K -->
 | Feature | L2 ID | L2 function name | Initial priority | Rule applied | Kano category | New priority | Effective priority | Justification (required if changed) | Person-hours | Cost (VND) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| F-01 | FR-01-01 | Submit supplier & raw material carbon data | Must |  |  |  | Must |  | 10.8 | 2,840,000 |
+| F-01 | FR-01-01 | Submit supplier & raw material carbon data | Should |  |  |  | Should |  | 14.8 | 3,640,000 |
 | F-01 | FR-01-02 | Manage GHG methodology & emission factors | Must |  |  |  | Must |  | 17.6 | 4,880,000 |
 | F-01 | FR-01-03 | Calculate batch carbon intensity | Must |  |  |  | Must |  | 13.6 | 4,080,000 |
 | F-01 | FR-01-04 | View batch carbon intensity | Should |  |  |  | Should |  | 7.4 | 1,820,000 |
@@ -72,8 +72,8 @@
 <!-- BEGIN:control | derived - auto-generated, do not edit -->
 | Indicator | Current | Threshold | Verdict |
 |---|---|---|---|
-| Must share of in-scope effort | 76.5% | 60.0% | OVER THRESHOLD |
+| Must share of in-scope effort | 73.0% | 60.0% | OVER THRESHOLD |
 | Could share (contingency pool) | 2.2% | 20.0% | POOL TOO THIN |
-| In-scope effort vs capacity (p-h) | 395 | 240 | OVER THRESHOLD |
-| Expected cost (Must + Should) | 109,060,000 |  | The figure given to the client and used for NPV in Session 8 |
+| In-scope effort vs capacity (p-h) | 399 | 240 | OVER THRESHOLD |
+| Expected cost (Must + Should) | 109,860,000 |  | The figure given to the client and used for NPV in Session 8 |
 <!-- END:control -->

@@ -19,8 +19,8 @@
 <!-- BEGIN:l3 | derived - auto-generated, do not edit -->
 | L3 ID | Feature | L2 ID | Layer | Base hours | AI factor | AI-adj. hours | Verif. factor | Verif. hours | Person-hours | Band | Rate | Cost (VND) | Effective priority |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| FR-01-01-FE | F-01 | FR-01-01 | FE | 8 | 0.35 | 2.8 | 0.15 | 1.2 | 4 | Junior | 200,000 | 800,000 | Must |
-| FR-01-01-BE | F-01 | FR-01-01 | BE | 8 | 0.7 | 5.6 | 0.15 | 1.2 | 6.8 | Senior | 300,000 | 2,040,000 | Must |
+| FR-01-01-FE | F-01 | FR-01-01 | FE | 16 | 0.35 | 5.6 | 0.15 | 2.4 | 8 | Junior | 200,000 | 1,600,000 | Should |
+| FR-01-01-BE | F-01 | FR-01-01 | BE | 8 | 0.7 | 5.6 | 0.15 | 1.2 | 6.8 | Senior | 300,000 | 2,040,000 | Should |
 | FR-01-02-FE | F-01 | FR-01-02 | FE | 8 | 0.35 | 2.8 | 0.15 | 1.2 | 4 | Junior | 200,000 | 800,000 | Must |
 | FR-01-02-BE | F-01 | FR-01-02 | BE | 16 | 0.7 | 11.2 | 0.15 | 2.4 | 13.6 | Senior | 300,000 | 4,080,000 | Must |
 | FR-01-03-BE | F-01 | FR-01-03 | BE | 16 | 0.7 | 11.2 | 0.15 | 2.4 | 13.6 | Senior | 300,000 | 4,080,000 | Must |
@@ -78,7 +78,7 @@
 | FR-04-04-BE | F-04 | FR-04-04 | BE | 8 | 0.7 | 5.6 | 0.15 | 1.2 | 6.8 | Senior | 300,000 | 2,040,000 | Must |
 | FR-04-05-BE | F-04 | FR-04-05 | BE | 8 | 0.7 | 5.6 | 0.15 | 1.2 | 6.8 | Senior | 300,000 | 2,040,000 | Should |
 | FR-04-06-FE | F-04 | FR-04-06 | FE | 4 | 0.35 | 1.4 | 0.15 | 0.6 | 2 | Junior | 200,000 | 400,000 | Should |
-| TOTAL |  |  |  | 504 |  | 313.4 |  | 81.6 | 395 |  |  | 111,500,000 |  |
+| TOTAL |  |  |  | 512 |  | 316.2 |  | 82.8 | 399 |  |  | 112,300,000 |  |
 <!-- END:l3 -->
 
 ## Cost per L2 function
@@ -86,7 +86,7 @@
 <!-- BEGIN:l2 | derived - auto-generated, do not edit -->
 | L2 ID | L2 function name | Feature | FP type | L3 items | Person-hours | Cost (VND) | Effective priority |
 |---|---|---|---|---|---|---|---|
-| FR-01-01 | Submit supplier & raw material carbon data | F-01 | EI | 2 | 10.8 | 2,840,000 | Must |
+| FR-01-01 | Submit supplier & raw material carbon data | F-01 | EI | 2 | 14.8 | 3,640,000 | Should |
 | FR-01-02 | Manage GHG methodology & emission factors | F-01 | EI | 2 | 17.6 | 4,880,000 | Must |
 | FR-01-03 | Calculate batch carbon intensity | F-01 | EO | 1 | 13.6 | 4,080,000 | Must |
 | FR-01-04 | View batch carbon intensity | F-01 | EQ | 2 | 7.4 | 1,820,000 | Should |
@@ -135,10 +135,10 @@
 | Functional work — function-point estimate (h) | 606 | What function points can see |
 | Non-functional (NC) work — bottom-up (h) | 40 | The 0 function point problem: concurrency, authorisation, deployment. IFPUG needs a separate method (SNAP) for this |
 | Function-point basis total (h) | 646 | Functional + non-functional |
-| Bottom-up basis total (h) | 504 | Sum of W1 column L |
-| Variance | -22.0% | Within tolerance - the two methods agree |
+| Bottom-up basis total (h) | 512 | Sum of W1 column L |
+| Variance | -20.7% | Within tolerance - the two methods agree |
 | Active estimation basis | Bottom-up | Set on Parameters section 9 |
-| Base hours actually in use | 504 | What the cost columns are built from right now |
+| Base hours actually in use | 512 | What the cost columns are built from right now |
 <!-- END:fp_check -->
 
 _Read it this way: function points size the FUNCTIONAL work only, so the NC line is added separately rather than folded in. Switching the basis on Parameters section 9 changes which of the two totals drives every cost in the workbook; NC rows stay on bottom-up either way, because there is no function-point number for them to come from._

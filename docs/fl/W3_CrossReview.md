@@ -33,7 +33,7 @@
 | C2 | Scope boundary explicit (Won't-have with a reason) | Person | Won't-have rows recorded: 3 |  |  |  |  |
 | C3 | MECE — no duplicates, no missing CRUD | Person | Not machine-checkable — read it |  |  |  |  |
 | C4 | State and time transitions have a trigger | Person | Read it — look for CLOCK-triggered functions |  |  |  |  |
-| C5 | Hidden technical work | Machine + person | Hidden share: 63.5%  (floor 10%) |  |  |  |  |
+| C5 | Hidden technical work | Machine + person | Hidden share: 62.9%  (floor 10%) |  |  |  |  |
 | C6 | Granularity 4-16 hours | Machine | L3 rows above ceiling: 0 |  |  |  |  |
 | C7 | Layer label FE / BE / INT present | Machine + person | L3 rows missing a layer: 0 |  |  |  |  |
 | C8 | Independently testable EARS sentence | Person | Rows flagged EARS not precise: 2 |  |  |  |  |
