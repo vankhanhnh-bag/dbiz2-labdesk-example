@@ -10,7 +10,7 @@ Sources swept, one diagram per pass: Use Case, Sequence, Context, CVCA, Architec
 
 | Feature | L2 ID | L2 function name | Actor | EARS acceptance criterion | Source trace | Initial priority | FP type |
 |---|---|---|---|---|---|---|---|
-| F-00 | FR-00-01 | Sign in with the university account | Student, Lab Technician | WHEN a user opens LabDesk without a session, the system SHALL send them to the university sign-in page and start a session for the account that returns. | Context: University SSO; ADR-002 | Must | EQ |
+| F-00 | FR-00-01 | Sign in with the university account | Student, Lab Technician | WHEN a user opens LabDesk without a session, the system SHALL send them to the university sign-in page and start a session for the account that returns. | Context: University SSO; ADR-002 | Must | NC |
 | F-00 | FR-00-02 | Enforce user roles | System | IF a signed-in user who is not a Lab Technician opens a technician screen, THEN the system SHALL refuse access and show the student home page. | Use Case Diagram (two actors); ADR-002 | Must | NC |
 | F-00 | FR-00-03 | Deploy automatically | System | WHEN a change is merged into the main branch, the system SHALL build it, run the tests and deploy it to the staging server. | Architecture; ADR-001 | Must | NC |
 | F-00 | FR-00-04 | Record errors and alert the team | System | IF a request fails with a server error, THEN the system SHALL record the error and alert the integrator within 5 minutes. | Architecture | Must | NC |
