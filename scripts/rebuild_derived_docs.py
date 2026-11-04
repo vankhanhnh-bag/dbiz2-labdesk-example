@@ -367,7 +367,7 @@ def main() -> None:
     capacity = float(capacity_match.group(1))
     fp_hours = numbers_in(w5_assumptions["Hours per function point (cross-check only)"])[0]
     must_cost = scenario_totals["Committed"][1]
-    contingency_pct = parse_percent(w5_assumptions["Money contingency on the Must set"], "=")
+    contingency_pct = parse_percent(w5_assumptions["Money contingency on the Must set"], "")
     contingency = round(must_cost * contingency_pct)
 
     hidden_hours = sum(x["hours"] for x in work if x["hidden"] and x["priority"] in {"Must", "Should", "Could"})
