@@ -437,7 +437,11 @@ def main() -> None:
     if len(benefit_values) < 3:
         raise ValueError("Could not parse Must/Should/Could steady-state benefits from W6")
     benefit_by_priority = dict(zip(("Must", "Should", "Could"), benefit_values[:3]))
-    ramp_values = numbers_in(w6_assumptions["Adoption ramp-up (share of steady-state benefit)"])
+    ramp_values = [float(x) for x in re.findall(
+        r"Year\\s+\\d+(?:\\s+to\\s+\\d+)?:\\s*(\\d+(?:\\.\\d+)?)\\s*%",
+        w6_assumptions["Adoption ramp-up (share of steady-state benefit)"],
+        re.I,
+    )]
     ramp = [x / 100 for x in ramp_values]
     if len(ramp) < 3:
         raise ValueError("W6 adoption ramp-up must define Year 1, Year 2 and Year 3+ percentages")
