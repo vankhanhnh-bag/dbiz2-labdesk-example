@@ -1,0 +1,24 @@
+name: Rebuild markdown tables
+on:
+  push:
+    paths: ["docs/**", "model/**", "build.py", "tables.py"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r requirements.txt
+      - run: sudo apt-get update && sudo apt-get install -y libreoffice-calc
+      - run: python build.py sync
+      - name: Commit recalculated tables
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add docs
+          git diff --cached --quiet || git commit -m "Auto-recalculate derived tables"
+          git push
