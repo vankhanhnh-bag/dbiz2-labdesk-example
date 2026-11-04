@@ -438,7 +438,7 @@ def main() -> None:
         raise ValueError("Could not parse Must/Should/Could steady-state benefits from W6")
     benefit_by_priority = dict(zip(("Must", "Should", "Could"), benefit_values[:3]))
     ramp_values = [float(x) for x in re.findall(
-        r"Year\\s+\\d+(?:\\s+to\\s+\\d+)?:\\s*(\\d+(?:\\.\\d+)?)\\s*%",
+        r"Year\s+\d+(?:\s+to\s+\d+)?:\s*(\d+(?:\.\d+)?)\s*%",
         w6_assumptions["Adoption ramp-up (share of steady-state benefit)"],
         re.I,
     )]
